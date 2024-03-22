@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse;
+    border: 2px solid #25292d;
+  }
+  
+  td {
+    background-color: green;
+  }
+  
+  tr:nth-child(even) > td:nth-child(odd) {
+    background-color: aliceblue;
+  }
+  
+  tr:nth-child(odd) > td:nth-child(even) {
+    background-color: aliceblue;
+  }
+  
+  tr:nth-child(odd) > td:nth-child(odd) {
+    background-color: #25292d;
+  }
+  
+  tr:nth-child(even) > td:nth-child(even) {
+    background-color: #25292d;
+  }
+  
+  td {
+    /* background-image: url('../assets/black_queen.svg'); */
+    width: 4rem;
+    height: 4rem;
+    transition: all ease-in 0.06s;
+  }
+  
+  td.locked {
+    scale: 100%;
+  }
+  
+  tr:nth-child(odd) > td.queen:nth-child(odd),
+  tr:nth-child(even) > td.queen:nth-child(even) {
+    background-image: url("../assets/white_queen.svg");
+  }
+  
+  tr:nth-child(odd) > td.queen:nth-child(even),
+  tr:nth-child(even) > td.queen:nth-child(odd) {
+    background-image: url("../assets/black_queen.svg");
+  }
+  
+  tr:first-child > td,
+  tr:last-child > td,
+  td:first-child,
+  td:last-child {
+    background-color: red !important;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
