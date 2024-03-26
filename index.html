@@ -10,10 +10,22 @@
 <body>
     <h1>Visualizador de ajedrez</h1>
     <main>
+        <section id="game-options">
+            <label for="mode">Modo de reproducción</label>
+            <select name="mode" id="mode">
+                <option value="step">Paso a paso</option>
+                <option value="complete">Completo</option>
+            </select>
+
+            <label for="match">Partida</label>
+            <select name="match" id="match">
+            </select>
+        </section>
         <table id="board"></table>
     </main>
-    <script src="js/pieces.js" type="text/javascript"></script>
+    <script src="js/piezas.js" type="text/javascript"></script>
     <script src="js/inicializarTablero.js" type="text/javascript"></script>
+    <script src="js/obtenerPartidas.js" type="text/javascript"></script>
     <script src="main.js" type="text/javascript"></script>
 </body>
 </html>

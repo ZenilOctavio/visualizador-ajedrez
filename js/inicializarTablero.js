@@ -25,7 +25,7 @@ function nameColumnsAndRows(board){
  */
 function nameRows(board){
     let rows = [...board.children[0].children]
-    console.log(rows)
+    // console.log(rows)
 
     rows.forEach( (row, rowIndex) => {
         if (row.rowIndex == 0 || row.rowIndex == 9) return
@@ -91,7 +91,7 @@ function nameColumns(board){
  */
 function createPieceElement(cell, symbol, clipped){
     let piece = document.createElement('span')
-    console.log(piece)
+    // console.log(piece)
     if (clipped)
         piece.classList.add('white')
     piece.innerHTML = symbol
