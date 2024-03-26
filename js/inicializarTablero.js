@@ -1,5 +1,5 @@
 function createBoard(){
-    const table = document.createElement('table')
+    const table = document.querySelector('table#board')
     const tbody = document.createElement('tbody')
 
     let currentRow;
@@ -11,7 +11,6 @@ function createBoard(){
         tbody.appendChild(currentRow)
     }
     table.appendChild(tbody)
-    document.querySelector('body').appendChild(document.createElement('main').appendChild(table))
     return table
 }
 
