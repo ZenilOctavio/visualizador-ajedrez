@@ -1,2 +1,3 @@
-const board = createTable()
+const board = createBoard()
 nameColumnsAndRows(board)
+placePieces(board)

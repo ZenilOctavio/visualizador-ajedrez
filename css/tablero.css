@@ -1,3 +1,8 @@
+:root{
+  --black-color: #3e4144;
+  --white-color: aliceblue;
+}
+
 table {
     border-collapse: collapse;
     border: 2px solid #25292d;
@@ -8,19 +13,19 @@ table {
   }
   
   tr:nth-child(even) > td:nth-child(odd) {
-    background-color: aliceblue;
+    background-color: var(--white-color);
   }
   
   tr:nth-child(odd) > td:nth-child(even) {
-    background-color: aliceblue;
+    background-color: var(--white-color);
   }
   
   tr:nth-child(odd) > td:nth-child(odd) {
-    background-color: #25292d;
+    background-color: var(--black-color);
   }
   
   tr:nth-child(even) > td:nth-child(even) {
-    background-color: #25292d;
+    background-color: var(--black-color);
   }
   
   td {
@@ -28,6 +33,8 @@ table {
     width: 4rem;
     height: 4rem;
     transition: all ease-in 0.06s;
+    font-size: 3rem;
+    text-align: center;
   }
   
   td.locked {
@@ -54,3 +61,12 @@ table {
     font-size: 1rem;
     font-weight: 600;
   }
+
+  tr:nth-child(odd) > td:nth-child(odd) > span.white,  tr:nth-child(even) > td:nth-child(even) > span.white {
+    display: inline-block;
+    background-color: white; /* Color you want to fill inside */
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;
+    color: transparent; /* Make the text transparent */
+  }
+  
