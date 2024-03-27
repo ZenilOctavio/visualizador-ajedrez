@@ -8,3 +8,9 @@ main{
 h1{
     text-align: center;
 }
+
+section#match-options{
+    padding: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}

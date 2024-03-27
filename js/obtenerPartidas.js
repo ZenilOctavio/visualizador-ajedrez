@@ -30,15 +30,15 @@ async function showOptions(matchesDictionary){
     const matchOptions = document.querySelector('select#match')
 
     const matches = await getAllMatches()
-    
+
     matches.forEach((match, index) => {
         let newOption = document.createElement('option')
-        let matchKey = `partida${index}`
+        let matchKey = `partida${index+1}`
         newOption.value = matchKey
         newOption.text = `Partida ${index+1}`
         
         // console.log(match)
-        matchesDictionary[matchKey] = match
+        matchesDictionary[matchKey] = new Match(match)
         matchOptions.appendChild(newOption)
     })
 
